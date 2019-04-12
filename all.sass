@@ -1,0 +1,51 @@
+$wrap: #E5E5E5
+
+@mixin size($w, $h)
+    width: $w
+    height: $h
+
+body
+    display: flex
+    justify-content: center
+
+.wrap
+    background-color: $wrap
+    +size(1280px, 800px)
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.header__wrap
+    font-size: 70px
+    white-space: nowrap
+    +size(535px, 98px)
+    border-top: solid 10px black
+    border-bottom: solid 10px black
+    margin-top: 72px
+
+.content__wrap
+    border: solid 1px
+    margin-top: 32px
+    & .content__NY
+        +size(540px, 104px)
+        display: flex
+        justify-content: space-around
+        align-items: center
+        border: solid 1px
+        font-weight: 900
+        &:hover
+            background-color: black
+            color: white
+        & .content__title
+            font-size: 32px
+            padding: 2px 0px
+            +size(192px, auto)
+        & em
+            font-size: 16px
+        & h1
+            font-size: 72px
+            white-space: nowrap
+
+.active
+    background-color: black
+    color: white
